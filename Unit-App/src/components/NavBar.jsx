@@ -1,20 +1,18 @@
-import logo from "./assets/logo.png";
+import React from "react";
 import { Link } from "react-router-dom";
+import logo from "./assets/logo.png";
 
 const NavBar = () => {
-    return ( 
-        <>
+    return (
         <div className="nav-bar">
             <img src={logo} alt="FLARES LOGO" />
             <div className="auth">
-                <button className="signin-btn type1">
-                    <span className="btn-txt">Sign-In</span>
-                </button>
-                <button className="login-btn btn"><Link to= "/login">logIn</Link></button>
+                {/* Use Link directly without wrapping with <button> */}
+                <Link to="/signin" className="link-btn">Sign In</Link>
+                <Link to="/login" className="link-btn">Log In</Link>
             </div>
         </div>
-        </>
-     );
+    );
 }
 
 export default NavBar;
