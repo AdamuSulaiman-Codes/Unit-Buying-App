@@ -41,14 +41,14 @@ body, html {
 }
 
 .signin-btn, .login-btn {
-  padding: 5px 10px; /* Reduced padding */
-  font-size: 12px; /* Reduced font size */
+  padding: 5px 10px; 
+  font-size: 12px; 
   background-color: #f96d00;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
+} 
 
 .signin-btn:hover, .login-btn:hover {
   background-color: #0056b3;
@@ -62,11 +62,13 @@ body, html {
   padding: 20px;
   flex-wrap: wrap;
   margin-top: 20px; /* Add margin to separate from navbar */
+  height: 400px;
 }
 
 #hero-h1 {
   text-align: center;
   width: 600px;
+  font-size: 2rem;
 }
 
 .buy-units-btn {
@@ -76,6 +78,16 @@ body, html {
   color: #f96d00;
   width: 200px;
   height: 50px;
+  background-color: transparent;
+  border: 2px solid #f96d00;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.buy-units-btn:hover {
+  background-color: #f96d00;
+  color: #fff;
 }
 
 .hero-h1-btn {
@@ -84,6 +96,49 @@ body, html {
   justify-content: center;
   align-items: center;
 }
+
+.hero svg {
+  width: 300px;
+  height: auto;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #hero-h1 {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .buy-units-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .hero svg {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero-h1 {
+    font-size: 1.2rem;
+  }
+
+  .buy-units-btn {
+    width: 100%;
+    height: 40px;
+  }
+
+  .hero svg {
+    width: 200px;
+  }
+}
+
 
 .number {
   border-radius: 50%;
@@ -120,13 +175,9 @@ hr {
 
 .cards {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 40px;
-}
-
-.card svg {
-  width: 300px;
-  height: 200px;
 }
 
 .card {
@@ -140,11 +191,31 @@ hr {
   border-radius: 8px;
   border: 2px solid #222831;
   transition: transform 0.3s, border-color 0.3s;
+  margin: 20px;
+  width: calc(33.33% - 40px); /* Three cards per row with spacing */
+}
+
+.card svg {
+  width: 100%; /* Responsive width */
+  height: auto;
 }
 
 .card:hover {
   border-color: #f96d00;
   transform: scale(1.05);
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 40px); /* Two cards per row with spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: calc(100% - 40px); /* One card per row with spacing */
+  }
 }
 
 h2 {
@@ -215,6 +286,7 @@ h2 {
 .about-us-container img {
   width: 500px;
   border-radius: 20%;
+  transition: width 0.3s;
 }
 
 .about-us-container {
@@ -230,7 +302,35 @@ h2 {
 .about-us-container p {
   width: 500px;
   font-size: 30px;
+  transition: font-size 0.3s, width 0.3s;
 }
+
+@media (max-width: 768px) {
+  .about-us-container img {
+    width: 300px;
+  }
+
+  .about-us-container p {
+    width: 100%;
+    font-size: 24px;
+  }
+  .auth{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-container img {
+    width: 200px;
+  }
+
+  .about-us-container p {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
 
 .form {
   display: flex;
@@ -284,18 +384,18 @@ h2 {
   text-align: center;
 }
 
-.signin a {
+ .signin a {
   color: #f96d00;
 }
 
 .signin a:hover {
   text-decoration: underline #f96d00;
-}
+} 
 
 .flex {
   display: flex;
   width: 100%;
-  gap: 6px;
+  gap: 6px;z
 }
 
 .form label {

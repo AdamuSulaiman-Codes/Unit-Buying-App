@@ -5,7 +5,7 @@ const AboutUs = () => {
             <h2>About <span id="abt-txt">Us</span></h2>
             <div className="about-us-container">
                 <img src={abtPic} alt="About Us picture" />
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius rem minus magni hic eaque nesciunt quis ullam velit excepturi tenetur.</p>
+                <p>We are dedicated to providing a seamless and user-friendly experience for managing your electricity units and payments. Our platform aims to simplify the process and ensure transparency and ease for all users. Learn more about our mission and how we can assist you in managing your energy needs effectively.</p>
             </div>
         </>
      );

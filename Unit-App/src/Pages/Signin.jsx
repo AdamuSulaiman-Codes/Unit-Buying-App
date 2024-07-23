@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import '../login.css';
+import { Button } from "antd";
 
 const SignIn = () => {
     return (
@@ -15,7 +16,7 @@ const SignIn = () => {
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" className="input-field" />
                 </div>
-                <button type="submit" className="submit-btn">Sign In</button>
+                <Button type="submit" className="submit-btn">Sign In</Button>
             </form>
             <p className="signup-link">Don't have an account? <Link to="/signup">Sign Up</Link></p>
         </div>

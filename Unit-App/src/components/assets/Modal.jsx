@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Button } from "antd";
 const Modal = ({ toggleModal, children }) => {
     useEffect(() => {
         // Add the class to disable scrolling when the modal is open

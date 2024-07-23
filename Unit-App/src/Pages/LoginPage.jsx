@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import '../login.css';
-
+import { Button } from "antd";
 const Login = () => {
     return (
         <div className="form-container">
@@ -15,7 +15,7 @@ const Login = () => {
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" className="input-field" />
                 </div>
-                <button type="submit" className="submit-btn">Log In</button>
+                <Button type="submit" className="submit-btn">Log In</Button>
             </form>
             <p className="signup-link">Don't have an account? <Link to="/signup">Sign Up</Link></p>
         </div>

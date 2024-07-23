@@ -68,7 +68,7 @@ const BuyUnitModalContent = () => {
             onChange={(e) => setAmount(e.target.value)}
           />
         </label>
-        <PaystackButton className={classes.paystackButton} {...componentProps} />
+        <PaystackButton className={classes.paystackButton} {...componentProps}/>
       </div>
       {isModalOpen && (
         <Modal toggleModal={toggleModal}>
